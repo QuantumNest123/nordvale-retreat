@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NORDVALE Retreat — частный ретрит на берегу карельского озера. Резиденции, SPA, северная баня и авторская гастрономия." />
+  <title>NORDVALE Retreat — северная тишина, собранная в частный отдых</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-mark">N</span>
+        <span class="nav__logo-text">NORDVALE<span class="nav__logo-sub">retreat</span></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#concept">Концепция</a>
+        <a href="#residences">Резиденции</a>
+        <a href="#experiences">Впечатления</a>
+        <a href="#day">День</a>
+        <a href="#gallery">Галерея</a>
+      </nav>
+      <a href="#booking" class="nav__cta">Забронировать</a>
+      <button class="nav__burger" aria-label="Меню">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__media">
+      <img class="hero__bg" src="https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?auto=format&fit=crop&w=2600&q=85" alt="Туманное карельское озеро в северном лесу" />
+      <div class="hero__overlay"></div>
+      <div class="hero__vignette"></div>
+      <div class="hero__glow"></div>
+      <div class="hero__noise"></div>
+    </div>
+
+    <div class="hero__layout">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="dot"></span> Karelia · 61° N
+        </div>
+        <h1 class="hero__title">
+          <span class="line">Nordvale</span>
+          <span class="line line--italic">Retreat</span>
+        </h1>
+        <p class="hero__tagline">Северная тишина, собранная в частный отдых.</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--solid">Забронировать отдых</a>
+          <a href="#residences" class="btn btn--ghost">
+            Смотреть резиденции
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero__preview" aria-label="Featured residence">
+        <span class="hero__preview-corner hero__preview-corner--tl"></span>
+        <span class="hero__preview-corner hero__preview-corner--br"></span>
+        <div class="hero__preview-frame">
+          <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1200&q=85" alt="Lake House на берегу карельского озера" />
+          <div class="hero__preview-grad"></div>
+          <span class="hero__preview-pin">— 01</span>
+        </div>
+        <div class="hero__preview-info">
+          <span class="hero__preview-label">Featured residence</span>
+          <span class="hero__preview-title">Lake House</span>
+          <span class="hero__preview-sub">120 м² · у воды · private pier</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero__bottom">
+      <div class="hero__meta">
+        <div>
+          <span class="hero__meta-label">Локация</span>
+          <span class="hero__meta-value">Озеро Луннуси · Карелия</span>
+        </div>
+        <div>
+          <span class="hero__meta-label">Резиденции</span>
+          <span class="hero__meta-value">12 частных домов</span>
+        </div>
+        <div>
+          <span class="hero__meta-label">Сезон</span>
+          <span class="hero__meta-value">круглый год</span>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>scroll</span>
+        <span class="line-fall"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept reveal" id="concept">
+    <div class="container">
+      <div class="section-label">
+        <span>01</span> Концепция
+      </div>
+      <div class="concept__grid">
+        <div class="concept__head">
+          <h2 class="display">
+            Мы строим тишину так же тщательно,
+            <em>как другие строят отели.</em>
+          </h2>
+        </div>
+        <div class="concept__body">
+          <p>
+            NORDVALE — это не аренда домика. Это спроектированное проживание в карельском лесу,
+            где архитектура, ритуалы и сервис собраны в одну непрерывную сцену.
+          </p>
+          <p>
+            Двенадцать резиденций стоят так, чтобы вы не видели соседей. Только воду,
+            гранитные плиты и сосны. Каждая деталь — от запаха кедра в бане до подачи завтрака
+            на чугунной тарелке — выбрана, чтобы вы могли отключиться по-настоящему.
+          </p>
+        </div>
+      </div>
+
+      <ul class="concept__pillars">
+        <li>
+          <span class="num">— I</span>
+          <h3>Приватность</h3>
+          <p>До соседнего дома минимум 80 метров леса. Свой выход к воде, своя терраса, своя баня.</p>
+        </li>
+        <li>
+          <span class="num">— II</span>
+          <h3>Природа</h3>
+          <p>Защищённый участок 14 га на берегу озера. Сосны, скалы, северный мох.</p>
+        </li>
+        <li>
+          <span class="num">— III</span>
+          <h3>Восстановление</h3>
+          <p>SPA-программы, дыхание, баня по чёрному, холодное озеро, медитативные маршруты.</p>
+        </li>
+        <li>
+          <span class="num">— IV</span>
+          <h3>Архитектура</h3>
+          <p>Тёмное дерево, гранит, панорамное стекло. Дома вписаны в рельеф, а не поверх него.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESIDENCES -->
+  <section class="residences reveal" id="residences">
+    <div class="container">
+      <div class="section-label">
+        <span>02</span> Резиденции
+      </div>
+      <div class="residences__head">
+        <h2 class="display">Три способа<br /><em>остаться наедине с севером.</em></h2>
+        <p class="residences__lede">Каждая резиденция — отдельная история архитектуры и ландшафта. Выберите ту, что вам ближе.</p>
+      </div>
+
+      <div class="residences__list">
+        <article class="residence">
+          <div class="residence__img">
+            <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=1600&q=80" alt="Lake House — дом на берегу озера" />
+            <span class="residence__tag">— 01 · у воды</span>
+          </div>
+          <div class="residence__info">
+            <h3>Lake House</h3>
+            <p class="residence__desc">Стеклянная гостиная, выходящая прямо к воде. Терраса с подогревом, частный пирс, дровяная купель.</p>
+            <ul class="residence__meta">
+              <li><span>Площадь</span><strong>120 м²</strong></li>
+              <li><span>Гостей</span><strong>до 4</strong></li>
+              <li><span>Спальни</span><strong>2</strong></li>
+              <li><span>Камин</span><strong>да</strong></li>
+            </ul>
+            <a href="#booking" class="residence__link">Подробнее →</a>
+          </div>
+        </article>
+
+        <article class="residence residence--reverse">
+          <div class="residence__img">
+            <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=1600&q=80" alt="Forest Cabin — лесной дом" />
+            <span class="residence__tag">— 02 · в лесу</span>
+          </div>
+          <div class="residence__info">
+            <h3>Forest Cabin</h3>
+            <p class="residence__desc">Камерный дом из обугленного дерева, спрятанный среди сосен. Идеально для пары и медленного утра.</p>
+            <ul class="residence__meta">
+              <li><span>Площадь</span><strong>68 м²</strong></li>
+              <li><span>Гостей</span><strong>до 2</strong></li>
+              <li><span>Спальни</span><strong>1</strong></li>
+              <li><span>Сауна</span><strong>да</strong></li>
+            </ul>
+            <a href="#booking" class="residence__link">Подробнее →</a>
+          </div>
+        </article>
+
+        <article class="residence">
+          <div class="residence__img">
+            <img src="https://images.unsplash.com/photo-1604014237744-13b4d68df27c?auto=format&fit=crop&w=1600&q=80" alt="Stone Villa — каменная вилла на скале" />
+            <span class="residence__tag">— 03 · на скале</span>
+          </div>
+          <div class="residence__info">
+            <h3>Stone Villa</h3>
+            <p class="residence__desc">Самая просторная резиденция: гранит, дерево, два камина, отдельная баня по чёрному и подогреваемый бассейн.</p>
+            <ul class="residence__meta">
+              <li><span>Площадь</span><strong>210 м²</strong></li>
+              <li><span>Гостей</span><strong>до 6</strong></li>
+              <li><span>Спальни</span><strong>3</strong></li>
+              <li><span>SPA</span><strong>private</strong></li>
+            </ul>
+            <a href="#booking" class="residence__link">Подробнее →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES -->
+  <section class="experiences reveal" id="experiences">
+    <div class="container">
+      <div class="section-label section-label--light">
+        <span>03</span> Впечатления
+      </div>
+      <div class="experiences__head">
+        <h2 class="display">Ритуалы<br /><em>северного восстановления.</em></h2>
+      </div>
+
+      <div class="experiences__grid">
+        <div class="exp-card exp-card--lg">
+          <img src="https://images.unsplash.com/photo-1610641818989-c2051b5e2cfd?auto=format&fit=crop&w=1600&q=80" alt="SPA у озера" />
+          <div class="exp-card__text">
+            <span class="exp-card__num">/01</span>
+            <h3>SPA у озера</h3>
+            <p>Авторские программы на местных травах, гранитный массаж, контраст пара и северной воды.</p>
+          </div>
+        </div>
+        <div class="exp-card">
+          <img src="https://images.unsplash.com/photo-1554178286-db408c69256a?auto=format&fit=crop&w=1200&q=80" alt="Северная баня" />
+          <div class="exp-card__text">
+            <span class="exp-card__num">/02</span>
+            <h3>Северная баня</h3>
+            <p>Баня по чёрному, дубовые веники, купель в озере.</p>
+          </div>
+        </div>
+        <div class="exp-card">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Авторские ужины" />
+          <div class="exp-card__text">
+            <span class="exp-card__num">/03</span>
+            <h3>Авторские ужины</h3>
+            <p>Сет-меню из карельских продуктов от приглашённого шефа.</p>
+          </div>
+        </div>
+        <div class="exp-card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80" alt="Лесные маршруты" />
+          <div class="exp-card__text">
+            <span class="exp-card__num">/04</span>
+            <h3>Лесные маршруты</h3>
+            <p>Промаркированные тропы, утренние и закатные прогулки с гидом.</p>
+          </div>
+        </div>
+        <div class="exp-card exp-card--lg">
+          <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1600&q=80" alt="Медитативные практики" />
+          <div class="exp-card__text">
+            <span class="exp-card__num">/05</span>
+            <h3>Медитативные практики</h3>
+            <p>Дыхание, sound healing, тихие практики у воды с приглашёнными мастерами.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY IN NORDVALE -->
+  <section class="day reveal" id="day">
+    <div class="container">
+      <div class="section-label">
+        <span>04</span> День в NORDVALE
+      </div>
+      <h2 class="display day__title">Как складывается<br /><em>один день.</em></h2>
+
+      <div class="timeline">
+        <div class="timeline__line"></div>
+
+        <div class="t-item">
+          <div class="t-item__time">
+            <span class="t-item__hour">07:30</span>
+            <span class="t-item__phase">— Утро</span>
+          </div>
+          <div class="t-item__body">
+            <h4>Туман над водой</h4>
+            <p>Тихий завтрак на террасе, кофе на углях, неспешная прогулка к пирсу. Никаких будильников — только свет.</p>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-item__time">
+            <span class="t-item__hour">12:00</span>
+            <span class="t-item__phase">— День</span>
+          </div>
+          <div class="t-item__body">
+            <h4>Лес и вода</h4>
+            <p>Каякинг по озеру, маршрут к скалам, обед у воды или приватная сессия в SPA. Темп выбираете вы.</p>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-item__time">
+            <span class="t-item__hour">18:00</span>
+            <span class="t-item__phase">— Вечер</span>
+          </div>
+          <div class="t-item__body">
+            <h4>Ритуал бани</h4>
+            <p>Баня по чёрному, травяной чай, купель в озере. Затем — авторский сет-ужин при свечах.</p>
+          </div>
+        </div>
+
+        <div class="t-item">
+          <div class="t-item__time">
+            <span class="t-item__hour">23:00</span>
+            <span class="t-item__phase">— Ночь</span>
+          </div>
+          <div class="t-item__body">
+            <h4>Северное небо</h4>
+            <p>Камин, тёплый плед, тишина без сигналов. Зимой — северное сияние над озером.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery reveal" id="gallery">
+    <div class="container">
+      <div class="section-label section-label--light">
+        <span>05</span> Галерея
+      </div>
+      <h2 class="display gallery__title">Атмосфера<br /><em>в кадрах.</em></h2>
+
+      <div class="gallery__grid">
+        <figure class="g-card g-card--tall">
+          <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <figcaption>— рассвет на пирсе</figcaption>
+        </figure>
+        <figure class="g-card">
+          <img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <figcaption>— интерьер Lake House</figcaption>
+        </figure>
+        <figure class="g-card">
+          <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <figcaption>— карельский лес после дождя</figcaption>
+        </figure>
+        <figure class="g-card g-card--wide">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2000&q=80" alt="" />
+          <figcaption>— панорама с северной террасы</figcaption>
+        </figure>
+        <figure class="g-card">
+          <img src="https://images.unsplash.com/photo-1583878685877-cab63b6f5fd1?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <figcaption>— ритуал бани</figcaption>
+        </figure>
+        <figure class="g-card g-card--tall">
+          <img src="https://images.unsplash.com/photo-1551634979-2b11f8c946fe?auto=format&fit=crop&w=1200&q=80" alt="" />
+          <figcaption>— ужин при свечах</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="value reveal">
+    <div class="container">
+      <div class="section-label">
+        <span>06</span> Почему NORDVALE
+      </div>
+      <div class="value__grid">
+        <h2 class="display">
+          Это не аренда домика.<br />
+          <em>Это curated retreat experience.</em>
+        </h2>
+        <div class="value__list">
+          <div class="value__row">
+            <span>—</span>
+            <p><strong>Кураторский подход.</strong> Сценарий вашего пребывания собирает host: от трансфера до ужина, от бани до сна.</p>
+          </div>
+          <div class="value__row">
+            <span>—</span>
+            <p><strong>Закрытая территория.</strong> Только гости резиденций. Без чужих машин, без шумных компаний, без проходов.</p>
+          </div>
+          <div class="value__row">
+            <span>—</span>
+            <p><strong>Сервис без присутствия.</strong> Всё подаётся незаметно: завтрак на террасе, дрова у камина, свежие травы для бани.</p>
+          </div>
+          <div class="value__row">
+            <span>—</span>
+            <p><strong>Природа как соавтор.</strong> Архитектура и ритуалы рассчитаны на свет, воду и тишину Карелии.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking reveal" id="booking">
+    <div class="booking__media">
+      <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=2400&q=80" alt="Карельский пейзаж" />
+      <div class="booking__veil"></div>
+    </div>
+    <div class="container booking__inner">
+      <div class="section-label section-label--light">
+        <span>07</span> Бронирование
+      </div>
+      <div class="booking__grid">
+        <div class="booking__copy">
+          <h2 class="display">
+            Оставьте заявку<br />
+            <em>на приватный подбор даты.</em>
+          </h2>
+          <p>В течение дня свяжется ваш host: уточнит ритм поездки, подберёт резиденцию и соберёт сценарий пребывания.</p>
+          <div class="booking__contact">
+            <span>+7 (812) 000-00-00</span>
+            <span>concierge@nordvale.retreat</span>
+          </div>
+        </div>
+
+        <form class="booking__form" id="bookingForm" novalidate>
+          <label>
+            <span>Имя</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input type="tel" name="phone" required placeholder="+7" />
+          </label>
+          <label>
+            <span>Даты</span>
+            <input type="text" name="dates" placeholder="дд.мм — дд.мм" />
+          </label>
+          <label class="full">
+            <span>Комментарий</span>
+            <textarea name="comment" rows="3" placeholder="Резиденция, пожелания, повод"></textarea>
+          </label>
+          <button type="submit" class="btn btn--solid btn--full">
+            Отправить заявку
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1"/></svg>
+          </button>
+          <p class="booking__note">Отправляя форму, вы соглашаетесь с обработкой данных. Это не публичная бронь — мы перезваниваем лично.</p>
+          <div class="booking__success" id="bookingSuccess">
+            Спасибо. Ваш host свяжется с вами в течение дня.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-mark">N</span>
+        <div>
+          <div class="footer__name">NORDVALE Retreat</div>
+          <div class="footer__sub">Карелия · 61° N</div>
+        </div>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <span class="footer__h">Резиденции</span>
+          <a href="#residences">Lake House</a>
+          <a href="#residences">Forest Cabin</a>
+          <a href="#residences">Stone Villa</a>
+        </div>
+        <div>
+          <span class="footer__h">Связь</span>
+          <a href="mailto:concierge@nordvale.retreat">concierge@nordvale.retreat</a>
+          <a href="tel:+78120000000">+7 (812) 000-00-00</a>
+          <a href="#">Telegram · @nordvale</a>
+        </div>
+        <div>
+          <span class="footer__h">Юридическое</span>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия бронирования</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 NORDVALE Retreat. Все права защищены.</span>
+        <span>Сделано с заботой о тишине.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
