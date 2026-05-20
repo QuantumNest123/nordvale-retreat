@@ -258,11 +258,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 0;
   overflow: hidden;
 }
+.hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 25%, rgba(220, 226, 224, 0.07) 55%, transparent 80%),
+    radial-gradient(ellipse 90% 35% at 50% 70%, rgba(220, 230, 226, 0.06), transparent 70%);
+  mix-blend-mode: screen;
+}
 .hero__bg {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 38%;
-  filter: brightness(0.82) saturate(1.05) contrast(1.06);
+  filter: brightness(0.92) saturate(0.92) contrast(0.98);
   animation: heroZoom 24s var(--ease-out) forwards;
   will-change: transform;
 }
@@ -274,8 +285,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5, 8, 6, 0.6);
   z-index: 1;
+  background:
+    linear-gradient(180deg,
+      rgba(14, 22, 24, 0.32) 0%,
+      rgba(14, 22, 24, 0.42) 50%,
+      rgba(8, 12, 12, 0.55) 100%);
 }
 .hero__vignette {
   position: absolute;
@@ -283,22 +298,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 90% 80% at 30% 45%, transparent 0%, rgba(5,8,6,0.6) 100%),
-    linear-gradient(180deg, rgba(5,8,6,0.55) 0%, rgba(5,8,6,0) 22%, rgba(5,8,6,0) 55%, rgba(5,8,6,0.92) 100%),
-    linear-gradient(270deg, rgba(5,8,6,0.45) 0%, rgba(5,8,6,0) 35%);
+    radial-gradient(ellipse 100% 80% at 30% 45%, transparent 0%, rgba(8, 12, 12, 0.5) 100%),
+    linear-gradient(180deg, rgba(8, 12, 12, 0.4) 0%, rgba(8, 12, 12, 0) 18%, rgba(8, 12, 12, 0) 60%, rgba(8, 12, 12, 0.85) 100%),
+    linear-gradient(270deg, rgba(8, 12, 12, 0.35) 0%, rgba(8, 12, 12, 0) 30%);
 }
 .hero__glow {
   position: absolute;
   z-index: 2;
-  right: -10%;
-  bottom: 12%;
-  width: 65%;
-  height: 65%;
+  right: -8%;
+  bottom: 14%;
+  width: 70%;
+  height: 70%;
   background:
-    radial-gradient(circle at 60% 55%, rgba(201, 168, 124, 0.22) 0%, rgba(201, 168, 124, 0.08) 30%, transparent 65%);
+    radial-gradient(circle at 55% 50%,
+      rgba(218, 184, 135, 0.28) 0%,
+      rgba(201, 168, 124, 0.12) 28%,
+      rgba(201, 168, 124, 0.04) 50%,
+      transparent 72%);
   pointer-events: none;
-  filter: blur(28px);
-  animation: glowPulse 7s ease-in-out infinite alternate;
+  filter: blur(36px);
+  animation: glowPulse 8s ease-in-out infinite alternate;
 }
 @keyframes glowPulse {
   from { opacity: 0.7; transform: scale(0.96); }
@@ -392,18 +411,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   animation: fadeUp 1s var(--ease-out) 1.15s forwards;
 }
 
-/* Preview card on the right of hero */
+/* Preview card on the right of hero — integrated, softened */
 .hero__preview {
   position: relative;
   width: 100%;
   max-width: 360px;
   margin-left: auto;
-  padding: 18px 18px 22px;
-  background: rgba(16, 20, 18, 0.42);
-  border: 1px solid rgba(232, 228, 220, 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 2px;
+  padding: 16px 16px 20px;
+  background: rgba(18, 22, 20, 0.28);
+  border: 1px solid rgba(232, 228, 220, 0.06);
+  backdrop-filter: blur(18px) saturate(110%);
+  -webkit-backdrop-filter: blur(18px) saturate(110%);
+  border-radius: 3px;
+  box-shadow:
+    0 30px 60px -30px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 1.4s var(--ease-out) 1.6s forwards;
@@ -411,13 +433,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hero__preview:hover {
   transform: translateY(-6px);
-  border-color: rgba(201, 168, 124, 0.35);
-  background: rgba(20, 24, 22, 0.55);
+  border-color: rgba(201, 168, 124, 0.22);
+  background: rgba(20, 24, 22, 0.38);
 }
 .hero__preview-corner {
   position: absolute;
-  width: 18px; height: 18px;
-  border: 1px solid var(--accent);
+  width: 16px; height: 16px;
+  border: 1px solid rgba(201, 168, 124, 0.7);
   z-index: 3;
   pointer-events: none;
 }
@@ -434,13 +456,25 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 1.8s var(--ease-out);
-  filter: brightness(0.95) saturate(0.95);
+  filter: brightness(0.62) saturate(0.92) contrast(1.04);
 }
 .hero__preview:hover .hero__preview-frame img { transform: scale(1.06); }
 .hero__preview-grad {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(14,18,16,0) 45%, rgba(14,18,16,0.85) 100%);
+  background: linear-gradient(180deg,
+    rgba(8, 12, 12, 0.35) 0%,
+    rgba(8, 12, 12, 0) 35%,
+    rgba(8, 12, 12, 0) 55%,
+    rgba(8, 12, 12, 0.85) 100%);
+  pointer-events: none;
+}
+.hero__preview-warm {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 65% 45%, rgba(201, 168, 124, 0.18) 0%, transparent 55%);
+  mix-blend-mode: soft-light;
   pointer-events: none;
 }
 .hero__preview-pin {
@@ -499,8 +533,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   gap: clamp(24px, 4vw, 64px);
   flex-wrap: wrap;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 1.6s forwards;
 }
@@ -510,15 +544,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 4px;
 }
 .hero__meta-label {
-  font-size: 10px;
-  letter-spacing: 0.32em;
+  font-size: 9px;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--text-mute);
+  color: rgba(232, 228, 220, 0.4);
 }
 .hero__meta-value {
   font-family: var(--font-display);
-  font-size: 16px;
-  color: var(--text);
+  font-size: 14.5px;
+  color: rgba(232, 228, 220, 0.78);
+  font-weight: 300;
+  letter-spacing: 0.01em;
 }
 
 .hero__scroll {
